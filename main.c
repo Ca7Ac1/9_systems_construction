@@ -45,4 +45,5 @@ int main()
 
     struct Persona *p = createPersona("Alice\0", "Death\0", 41, 82, 68, 75, (rand() % 100) + 1);
     printPersona(p);
+    free(p);
 }
