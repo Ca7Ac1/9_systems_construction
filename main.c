@@ -16,12 +16,12 @@ struct Persona
 
 void printPersona(const struct Persona *p)
 {
-    printf("You have awakened %s of the %s arcana\n");
+    printf("You have awakened %s of the %s arcana\n", p->name, p->arcana);
     printf("strength: %d\n
             magic: %d\n
             endurance: %d\n
             agility: %d\n
-            luck: %d\n",p->strength, p->magic, p->endurance, p->agility, p->luck);
+            luck: %d\n", p->strength, p->magic, p->endurance, p->agility, p->luck);
 }
 
 struct Persona *createPersona(char *name, char *arcana, int strength, int magic, int endurance, int agility, int luck)
@@ -44,5 +44,5 @@ int main()
     srand(time(NULL));
 
     struct Persona *p = createPersona("Alice\0", "Death\0", 41, 82, 68, 75, (rand() % 100) + 1)
-    printPersona(p);
+        printPersona(p);
 }
