@@ -16,7 +16,7 @@ struct Persona
 
 void printPersona(const struct Persona *p)
 {
-    printf("You have awakened %s of the %s arcana\n", );
+    printf("You have awakened %s of the %s arcana\n");
     printf("strength: %d\n
             magic: %d\n
             endurance: %d\n
@@ -43,6 +43,6 @@ int main()
 {
     srand(time(NULL));
 
-    struct Persona *p = createPersona("Alice", "Death", 41, 82, 68, 75, (rand() % 100) + 1)
+    struct Persona *p = createPersona("Alice\0", "Death\0", 41, 82, 68, 75, (rand() % 100) + 1)
     printPersona(p);
 }
