@@ -17,11 +17,11 @@ struct Persona
 void printPersona(const struct Persona *p)
 {
     printf("You have awakened %s of the %s arcana\n", p->name, p->arcana);
-    printf("strength: %d\n
-            magic: %d\n
-            endurance: %d\n
-            agility: %d\n
-            luck: %d\n", p->strength, p->magic, p->endurance, p->agility, p->luck);
+    printf("strength: %d\n", p->strength);
+    printf("magic: %d\n", p->magic);
+    printf("endurance: %d\n", p->endurance);
+    printf("agility: %d\n", p->agility);
+    printf("luck: %d\n", p->luck);
 }
 
 struct Persona *createPersona(char *name, char *arcana, int strength, int magic, int endurance, int agility, int luck)
